@@ -1,0 +1,122 @@
+
+S09
+
+{
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "This is a image. Extract and return only the text exactly as shown, preserving case."
+        },
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "data:image/png;base64,{{base64_img}}"
+          }
+        }
+      ]
+    }
+  ]
+}
+
+Response:
+
+{
+    "id": "chatcmpl-a94a3e40-f7a1-4b7d-be7b-3b8f9d615ae8",
+    "object": "chat.completion",
+    "created": 1789803398,
+    "model": "qwen/qwen3.8-27b",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Create Account\n\nFull Name\nEmail Address\nPassword\nConfirm Password\nRegister\nAlready have an account? Sign in\nPasswords do not match\n\nLOGIN SCREEN\nUsername\nPassword\nLogin\n\nAC-REG-01\nGiven valid details\nWhen user clicks Register\nThen account is created successfully\n\nAC-REG-02\nGiven passwords do not match\nThen error message is displayed\n\nAC-LOGIN-01\nGiven valid username and password\nThen user is logged in successfully\n\nAC-LOGIN-02\nGiven invalid username or password\nThen error message is displayed"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "queue_time": 0.131033085,
+        "prompt_tokens": 800,
+        "prompt_time": 0.065412124,
+        "completion_tokens": 118,
+        "completion_time": 0.232459153,
+        "total_tokens": 918,
+        "total_time": 0.297871277
+    },
+    "usage_breakdown": null,
+    "system_fingerprint": "fp_4560dae850",
+    "x_groq": {
+        "id": "req_01m2w9h149e0pa5m49728vs28x",
+        "seed": 180277089
+    },
+    "service_tier": "on_demand"
+}
+
+S10:
+
+
+
+S11:
+
+{
+  "model": "openai/gpt-oss-20b",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Act as a Language Translator translating the user instructions in specified language"
+    },
+    {
+      "role": "user",
+      "content": "Hello Good Morning .Transalte in french"
+    }
+  ]
+}
+
+Response:
+
+{
+    "id": "chatcmpl-f9b944e6-4396-431e-9b34-19fe3fce856f",
+    "object": "chat.completion",
+    "created": 1789804048,
+    "model": "openai/gpt-oss-20b",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Bonjour, bonne matinée.",
+                "reasoning": "We need to translate the user instruction in specified language? The user says: \"Hello Good Morning .Transalte in french\". They want translation of that phrase into French? Likely translation of the phrase \"Hello Good Morning .\" into French. So output: \"Bonjour, bonne matinée.\" But \"Good Morning\" in French is \"Bonjour\" or \"Bonne matinée\". Let's be safe: \"Bonjour, bonne matinée.\" Might include \"Hello\" => \"Bonjour\". So answer: \"Bonjour, bonne matinée.\" Provide the translation."
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "queue_time": 0.31410952,
+        "prompt_tokens": 94,
+        "prompt_time": 0.005446958,
+        "completion_tokens": 125,
+        "completion_time": 0.135029374,
+        "total_tokens": 219,
+        "total_time": 0.140476332,
+        "completion_tokens_details": {
+            "reasoning_tokens": 110
+        }
+    },
+    "usage_breakdown": null,
+    "system_fingerprint": "fp_9b8528b477",
+    "x_groq": {
+        "id": "req_01m2wa4vc9e9t9m34c401bbd5j",
+        "seed": 1836591127
+    },
+    "service_tier": "on_demand"
+}
+
+
+
